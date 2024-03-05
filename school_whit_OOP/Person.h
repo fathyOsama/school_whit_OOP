@@ -19,8 +19,6 @@ public:
 	string get_address();
 	void set_gender(string gender);
 	string get_gender();
-
-	void prient();
 };
 
 

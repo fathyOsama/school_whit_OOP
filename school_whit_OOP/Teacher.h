@@ -4,7 +4,8 @@
 class Teacher : public Person
 {
 private:
-	string subject[3];
+	static const int size = 4;
+	string subject[size];
 	static vector<Teacher> teachers;
 public:
 	Teacher();
@@ -13,6 +14,5 @@ public:
 	string* get_subject();
 	static void add_teacher();
 	static void prient_teacher();
-	void print();
 };
 

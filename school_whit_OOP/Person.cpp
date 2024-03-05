@@ -52,13 +52,7 @@ string Person::get_gender()
 	return gender;
 }
 
-void Person::prient()
-{
-	cout << "name = " << name << endl;
-	cout << "age = " << age << endl;
-	cout << "address = " << address << endl;
-	cout << "gender = " << gender << endl;
-}
+
 
 
 

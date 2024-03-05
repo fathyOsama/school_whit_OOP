@@ -5,7 +5,7 @@
 #include"Person.h"
 #include"Student.h"
 #include"Teacher.h"
-#include"CridetSchollar.h"
+#include"CridetStudent.h"
 
 int main()
 {
@@ -16,11 +16,16 @@ int main()
 //	student1.set_degrees(myPtr);
 
 
-	Person p1;
-	p1.set_name("fathey");
-	cout << p1.get_name() << endl;
-
+	//Student::add_students();
+	//Student::prient_student();
 	
+	Teacher::add_teacher();
+	Teacher::prient_teacher();
+
+	//Teacher p1;
+	//p1.add_teacher();
+	//p1.prient_teacher();
+
 }
 
 // Run program: Ctrl + F5 or Debug > Start Without Debugging menu

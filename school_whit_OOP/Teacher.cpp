@@ -28,7 +28,9 @@ string* Teacher::get_subject()
 void Teacher::add_teacher()
 {
 	int teacher_size;
+	cout << "teacher_size = ";
 	cin >> teacher_size;
+	cout << "--------------------------" << endl;
 	for (int i = 0; i < teacher_size; i++)
 	{
 		Teacher timpteacher;
@@ -37,25 +39,21 @@ void Teacher::add_teacher()
 		cout << "teacher_name = ";
 		cin >> teacher_name;
 		timpteacher.set_name(teacher_name);
-		cout << timpteacher.get_name() << endl;
 
 		int teacher_age;
 		cout << "teacher_age = ";
 		cin >> teacher_age;
 		timpteacher.set_age(teacher_age);
-		cout << timpteacher.get_age() << endl;
 
 		string teacher_address;
 		cout << "teacher_address = ";
 		cin >> teacher_address;
 		timpteacher.set_address(teacher_address);
-		cout << timpteacher.get_address() << endl;
 
 		string teacher_gender;
 		cout << "teacher_gender = ";
 		cin >> teacher_gender;
 		timpteacher.set_gender(teacher_gender);
-		cout << timpteacher.get_gender() << endl;
 
 		string teacher_subject[4];
 		string* ptr_subject=&teacher_subject[0];
@@ -68,7 +66,7 @@ void Teacher::add_teacher()
 		}
 		timpteacher.set_subject(ptr_subject);
 		teachers.push_back(timpteacher);
-
+		cout << "======================" << endl;
 	}
 }
 
@@ -83,16 +81,12 @@ void Teacher::prient_teacher()
 		cout << "teacher_age = " << teacher.get_age() << endl;
 		cout << "teacher_address = " << teacher.get_address() << endl;
 		cout << "teacher_gender = " << teacher.get_gender() << endl;
-		for (int j = 0; j < 4; j++)
+		
+		for (int j = 0; j < size; j++)
 		{
-			cout << "teacher_subject = " << teacher.get_subject() << endl;
+			cout << "teacher_subject = " << teacher.get_subject()[j] << endl;
 		}
 		cout << endl;
 	}
 }
 
-void Teacher::print()
-{
-	Person::prient();
-	cout << "subject = " << subject << endl;
-}
